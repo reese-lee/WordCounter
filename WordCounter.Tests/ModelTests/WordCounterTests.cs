@@ -56,5 +56,16 @@ namespace WordCounter.Tests
       int wordOccurences = userCounter.GetResult();
       Assert.AreEqual(3, wordOccurences);
     }
+
+    [TestMethod]
+    public void SearchForWord_SearchSentenceForComplexPluralsOfWord_Int()
+    {
+      string word = "jelly";
+      string sentence = "These jellies are jelly";
+      RepeatCounter userCounter = new RepeatCounter(word);
+      userCounter.SearchForWord(sentence);
+      int wordOccurences = userCounter.GetResult();
+      Assert.AreEqual(2, wordOccurences);
+    }
   }
 }

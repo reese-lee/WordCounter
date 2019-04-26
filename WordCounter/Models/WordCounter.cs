@@ -7,9 +7,9 @@ namespace WordCounter.Models
     private string _word;
     private int _wordOccurences;
 
-    public RepeatCounter(string userInput)
+    public RepeatCounter(string word)
     {
-      _word = userInput.ToLower();
+      _word = word.ToLower();
     }
 
     public string GetWord()
@@ -30,6 +30,10 @@ namespace WordCounter.Models
       foreach (string word in userArray)
       {
         if(word == _word || word == _word + "s")
+        {
+          _wordOccurences ++;
+        }
+        else if (word == _word.Length -1 + "ies")
         {
           _wordOccurences ++;
         }
