@@ -24,6 +24,17 @@ namespace WordCounter.Tests
       Assert.AreEqual(word, wordCheck);
     }
 
+    [TestMethod]
+    public void SearchForWord_SearchSentenceForWord_Int()
+    {
+      string word = "jelly";
+      string sentence = "This makes me jelly";
+      RepeatCounter userCounter = new RepeatCounter(word);
+      userCounter.SearchForWord(sentence);
+      int wordOccurences = userCounter.GetResult();
+      Assert.AreEqual(1, wordOccurences);
+    }
+
     // [TestMethod]
     // public void GetsSentence_ReturnsLetterCharactersOnly_String()
     // {
