@@ -46,15 +46,15 @@ namespace WordCounter.Tests
       Assert.AreEqual(2, wordOccurences);
     }
 
-    // [TestMethod]
-    // public void SearchForWord_SearchSentenceForWord_Int()
-    // {
-    //   string word = "jelly";
-    //   string sentence = "This jellyfish makes me jelly";
-    //   RepeatCounter userCounter = new RepeatCounter(word);
-    //   userCounter.SearchForWord(sentence);
-    //   int wordOccurences = userCounter.GetResult();
-    //   Assert.AreEqual(1, wordOccurences);
-    // }
+    [TestMethod]
+    public void SearchForWord_SearchSentenceForPluralsOfWord_Int()
+    {
+      string word = "jelly";
+      string sentence = "This jellyfish JELLYS and jelly makes me jelly";
+      RepeatCounter userCounter = new RepeatCounter(word);
+      userCounter.SearchForWord(sentence);
+      int wordOccurences = userCounter.GetResult();
+      Assert.AreEqual(3, wordOccurences);
+    }
   }
 }
