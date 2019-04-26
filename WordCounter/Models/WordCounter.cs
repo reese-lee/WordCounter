@@ -33,32 +33,13 @@ namespace WordCounter.Models
         {
           _wordOccurences ++;
         }
-        else if (word == _word.Length -1 + "ies")
+        else if (word == _word + "ies")
         {
           _wordOccurences ++;
         }
       }
       return _wordOccurences;
     }
-
-    // public void SetSearchWord(string newWord)
-    // {
-    //   _word = newWord.ToLower();
-    // }
-
-    // public int CheckWords()
-    // {
-    //   string userWord = word;
-    //   char[] userArray = userWord.ToCharArray();
-    //   for (index i = 0; i < userArray.Count; i++)
-    //   {
-    //
-    //   }
-    // }
-
-
-
-
 
   }
 }
