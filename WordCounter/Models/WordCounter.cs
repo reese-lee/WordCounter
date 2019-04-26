@@ -33,10 +33,6 @@ namespace WordCounter.Models
         {
           _wordOccurences ++;
         }
-        else if (word == _word + "ies")
-        {
-          _wordOccurences ++;
-        }
       }
       return _wordOccurences;
     }
