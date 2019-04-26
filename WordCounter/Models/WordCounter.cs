@@ -26,7 +26,7 @@ namespace WordCounter.Models
 
     public int SearchForWord(string userSentence)
     {
-      string sentence = userSentence;
+      string sentence = userSentence.ToLower();
       string[] userArray = sentence.Split(' ');
 
       foreach (string word in userArray)
