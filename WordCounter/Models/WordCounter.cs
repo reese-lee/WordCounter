@@ -28,10 +28,10 @@ namespace WordCounter.Models
     {
       string sentence = userSentence;
       string[] userArray = sentence.Split(' ');
-  
+
       foreach (string word in userArray)
       {
-        if(word == _word)
+        if(word == _word || word == _word + "s")
         {
           _wordOccurences ++;
         }
