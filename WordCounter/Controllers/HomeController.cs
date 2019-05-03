@@ -11,10 +11,5 @@ namespace WordCounter.Controllers
         return View();
       }
 
-      // public ActionResult Index()
-      // {
-      //   return new EmptyResult();
-      // }
-
     }
 }

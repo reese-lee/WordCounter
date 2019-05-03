@@ -2,8 +2,20 @@
 
 <h1>Word Counter</h1>
 
-<a href="/wordcounter/new">Add a new word.</a>
+@if (Model.Count == 0)
+{
+  <p>You have not entered anything!</p>
+}
 
-<form action="/items/delete" method="post">
+@if (Model.Count != 0)
+
+{
+<h3>Here is how many times your word <b>@wordcounter.GetWord()</b> appeared in your sentence <i>@wordcounter.Get:</h3>
+
+@wordcounter.SearchForWord()
+}
+<a href="/wordcounter/new">Add a new word and sentence.</a>
+
+<form action="/wordcounter/delete" method="post">
 <button type="submit" name="button">Clear All Items</button>
 </form>

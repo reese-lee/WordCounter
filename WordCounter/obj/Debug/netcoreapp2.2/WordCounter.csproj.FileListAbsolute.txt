@@ -22,3 +22,6 @@ C:\Users\reese\desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp2.2\
 C:\Users\reese\desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp2.2\WordCounter.Views.pdb
 C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.Views.pdb
 C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.csproj.CopyComplete
+C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\WordCounter\New.g.cshtml.cs
+C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\WordCounter\CreateForm.g.cshtml.cs
+C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\WordCounter\WordCounter.g.cshtml.cs
