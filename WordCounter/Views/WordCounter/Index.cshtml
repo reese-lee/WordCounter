@@ -2,8 +2,10 @@
 
 <h1>Word Counter</h1>
 
-<p>This is how many times your word @Model.GetWord() appears in your sentence @Model.GetSentence(): </p>
+<p>This is how many times your word <b>@Model.GetWord()</b> appears in your sentence <i>@Model.GetSentence()</i>:
+@Model.GetResult().</p>
 
-<form action="/WordCounter/delete" method="post">
-<button type="submit" name="button">Clear All Items</button>
+
+<form action="/WordCounter/Index" method="post">
+<button type="submit" name="button">Play again!</button>
 </form>
