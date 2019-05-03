@@ -7,25 +7,24 @@ namespace WordCounter.Controllers
   public class WordCounterController : Controller
   {
 
-    [HttpGet("/wordcounter")]
-    public ActionResult Index(string word)
+    [HttpGet("/WordCounter")]
+    public ActionResult Index()
     {
-      RepeatCounter newWord = new RepeatCounter(word);
-      // string
-      return View("Index");
+      return View();
     }
 
-    [HttpGet("/wordcounter/new")]
+    [HttpGet("/WordCounter/new")]
     public ActionResult CreateForm()
     {
       return View();
     }
 
-    [HttpPost("/wordcounter/new")]
-    public ActionResult Create(string description)
+    [HttpPost("/WordCounter")]
+    public ActionResult Create(string word, string sentence)
     {
-      RepeatCounter newWord = new RepeatCounter();
-      return RedirectToAction("Index");
+      RepeatCounter newWord = new RepeatCounter(word, sentence);
+      newWord.SearchForWord(sentence);
+      return View("Index", newWord);
     }
 
   }
