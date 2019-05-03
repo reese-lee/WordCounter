@@ -11,7 +11,7 @@ namespace WordCounter.Models
     public RepeatCounter(string word, string sentence)
     {
       _word = word.ToLower();
-      _sentence = sentence.ToLower();
+      _sentence = sentence;
       GetResult();
     }
 

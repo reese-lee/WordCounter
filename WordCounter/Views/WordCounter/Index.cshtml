@@ -1,5 +1,9 @@
 @using WordCounter.Models;
 
+@{
+  Layout = "_Layout";
+}
+
 <h1>Word Counter</h1>
 
 <p>This is how many times your word <b>@Model.GetWord()</b> appears in your sentence <i>@Model.GetSentence()</i>:
@@ -7,3 +11,7 @@
 
 <a href="WordCounter/new">
 Play again!</a>
+
+<div class="cute">
+  <h2>@Model.GetWord().ToUpper()</h2>
+</div>
