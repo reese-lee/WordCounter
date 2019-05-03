@@ -10,10 +10,10 @@ namespace WordCounter.Controllers
     [HttpGet("/wordcounter")]
     public ActionResult Index()
     {
-      string userWord;
-      RepeatCounter newWord = new RepeatCounter(word);
-      string userWord = newWord.GetWord();
-      return View(userWord);
+      // string userWord;
+      // RepeatCounter newWord = new RepeatCounter(userWord);
+      // string
+      return View("Index");
     }
 
     [HttpGet("/wordcounter/new")]
@@ -25,7 +25,7 @@ namespace WordCounter.Controllers
     [HttpPost("/wordcounter")]
     public ActionResult Create(string description)
     {
-      RepeatCounter newWord = new RepeatCounter(word);
+      // RepeatCounter newWord = new RepeatCounter();
       return RedirectToAction("Index");
     }
 
