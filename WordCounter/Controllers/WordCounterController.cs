@@ -8,10 +8,9 @@ namespace WordCounter.Controllers
   {
 
     [HttpGet("/wordcounter")]
-    public ActionResult Index()
+    public ActionResult Index(string word)
     {
-      // string userWord;
-      // RepeatCounter newWord = new RepeatCounter(userWord);
+      RepeatCounter newWord = new RepeatCounter(word);
       // string
       return View("Index");
     }
@@ -22,10 +21,10 @@ namespace WordCounter.Controllers
       return View();
     }
 
-    [HttpPost("/wordcounter")]
+    [HttpPost("/wordcounter/new")]
     public ActionResult Create(string description)
     {
-      // RepeatCounter newWord = new RepeatCounter();
+      RepeatCounter newWord = new RepeatCounter();
       return RedirectToAction("Index");
     }
 
