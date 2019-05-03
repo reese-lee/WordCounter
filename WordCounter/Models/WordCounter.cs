@@ -6,6 +6,7 @@ namespace WordCounter.Models
   {
     private string _word;
     private int _wordOccurences;
+    private string _sentence;
 
     public RepeatCounter(string word)
     {
@@ -20,6 +21,11 @@ namespace WordCounter.Models
     public int GetResult()
     {
       return _wordOccurences;
+    }
+
+    public string GetSentence()
+    {
+      return _sentence.ToLower();
     }
 
     public int SearchForWord(string userSentence)
