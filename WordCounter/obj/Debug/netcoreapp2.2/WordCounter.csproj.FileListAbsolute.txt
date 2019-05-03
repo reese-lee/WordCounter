@@ -7,3 +7,5 @@ C:\Users\reese\desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp2.2\
 C:\Users\reese\desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp2.2\WordCounter.pdb
 C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.dll
 C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.pdb
+C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.RazorAssemblyInfo.cache
+C:\Users\reese\desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.RazorAssemblyInfo.cs

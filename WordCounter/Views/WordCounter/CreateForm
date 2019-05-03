@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Word Counter</title>
+  </head>
+  <body>
+    <h1>Word Counter</h1>
+
+    <form action="/wordcounter" method="post">
+      <label for="word">Add a new word</label>
+      <input id="word" name="word" type="text">
+      <label for="sentence">Add a new sentence</label>
+      <input id="sentence" name="sentence" type="text">
+      <button type="submit">Find out how many times the word repeats!</button>
+    </form>
+
+  </body>
+</html>
