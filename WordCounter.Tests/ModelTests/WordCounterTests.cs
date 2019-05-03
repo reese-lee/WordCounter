@@ -9,7 +9,7 @@ namespace WordCounter.Tests
   public class RepeatCounterTests
   {
     [TestMethod]
-    public void RepeatCounterConstructor_CreatesInstanceOfObject_Strings()
+    public void  RepeatCounterConstructor_CreatesInstanceOfObject_Strings()
     {
       RepeatCounter userCounter = new RepeatCounter("jelly");
       Assert.AreEqual(typeof(RepeatCounter), userCounter.GetType());
