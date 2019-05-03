@@ -5,33 +5,29 @@ namespace WordCounter.Models
   public class RepeatCounter
   {
     private string _word;
-    private int _wordOccurences;
     private string _sentence;
+    private int _wordOccurences;
 
-    public RepeatCounter(string word)
+    public RepeatCounter(string word, string sentence)
     {
       _word = word.ToLower();
+      _sentence = sentence.ToLower();
+      GetResult();
     }
 
     public string GetWord()
     {
-      return _word.ToLower();
-    }
-
-    public int GetResult()
-    {
-      return _wordOccurences;
+      return _word;
     }
 
     public string GetSentence()
     {
-      return _sentence.ToLower();
+      return _sentence;
     }
 
-    public int SearchForWord(string userSentence)
+    public void SearchForWord(string sentence)
     {
-      string sentence = userSentence.ToLower();
-      string[] userArray = sentence.Split(' ');
+      string[] userArray = sentence.ToLower().Split(' ');
 
       foreach (string word in userArray)
       {
@@ -40,6 +36,10 @@ namespace WordCounter.Models
           _wordOccurences ++;
         }
       }
+    }
+
+    public int GetResult()
+    {
       return _wordOccurences;
     }
 
