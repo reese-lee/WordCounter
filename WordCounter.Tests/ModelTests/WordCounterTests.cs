@@ -11,7 +11,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void  RepeatCounterConstructor_CreatesInstanceOfObject_Strings()
     {
-      RepeatCounter userCounter = new RepeatCounter("jelly");
+      RepeatCounter userCounter = new RepeatCounter("jelly", "jellyfish");
       Assert.AreEqual(typeof(RepeatCounter), userCounter.GetType());
     }
 
@@ -19,7 +19,8 @@ namespace WordCounter.Tests
     public void ReturnUserWord_UserWordIsReturned_String()
     {
       string word = "jelly";
-      RepeatCounter userCounter = new RepeatCounter("JELLY");
+      string sentence = "the jelly and fish";
+      RepeatCounter userCounter = new RepeatCounter(word, sentence);
       string wordCheck = userCounter.GetWord();
       Assert.AreEqual(word, wordCheck);
     }
@@ -29,7 +30,7 @@ namespace WordCounter.Tests
     {
       string word = "jelly";
       string sentence = "This jellyfish makes me jelly";
-      RepeatCounter userCounter = new RepeatCounter(word);
+      RepeatCounter userCounter = new RepeatCounter(word, sentence);
       userCounter.SearchForWord(sentence);
       int wordOccurences = userCounter.GetResult();
       Assert.AreEqual(1, wordOccurences);
@@ -40,7 +41,7 @@ namespace WordCounter.Tests
     {
       string word = "jelly";
       string sentence = "This peanut butter and JELLY sandwich makes me jelly";
-      RepeatCounter userCounter = new RepeatCounter(word);
+      RepeatCounter userCounter = new RepeatCounter(word, sentence);
       userCounter.SearchForWord(sentence);
       int wordOccurences = userCounter.GetResult();
       Assert.AreEqual(2, wordOccurences);
@@ -51,7 +52,7 @@ namespace WordCounter.Tests
     {
       string word = "jelly";
       string sentence = "This jellyfish JELLYS and jelly makes me jelly";
-      RepeatCounter userCounter = new RepeatCounter(word);
+      RepeatCounter userCounter = new RepeatCounter(word, sentence);
       userCounter.SearchForWord(sentence);
       int wordOccurences = userCounter.GetResult();
       Assert.AreEqual(3, wordOccurences);

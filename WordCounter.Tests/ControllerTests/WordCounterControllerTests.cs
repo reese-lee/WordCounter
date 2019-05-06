@@ -1,26 +1,37 @@
-[TestMethod]
-    public void Create_ReturnsCorrectActionType_RedirectToActionResult()
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using WordCounter.Controllers;
+using WordCounter.Models;
+
+namespace WordCounter.Tests
+{
+    [TestClass]
+    public class WordCounterControllerTest
     {
-        //Arrange
-        ItemsController controller = new ItemsController();
+      [TestMethod]
+       public void Index_ReturnsCorrectView_True()
+       {
+           //Arrange
+           WordCounterController controller = new WordCounterController();
+           //Act
+           ActionResult indexView = controller.Index();
+           //Assert
+           Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+       }
 
-        //Act
-        IActionResult view = controller.Create("Walk the dog");
+       [TestMethod]
+        public void CreateForm_ReturnsCorrectView_true()
+        {
+          //Arrange
+          WordCounterController controller = new WordCounterController();
 
-        //Assert
-        Assert.IsInstanceOfType(view, typeof(RedirectToActionResult));
+          //Act
+          ActionResult newForm = controller.Create("jelly", "the sea jelly");
+
+          //Assert
+          Assert.IsInstanceOfType(newForm, typeof(ViewResult));
+        }
+
     }
-
-    [TestMethod]
-    public void Create_RedirectsToCorrectAction_Index()
-    {
-        //Arrange
-        ItemsController controller = new ItemsController();
-        RedirectToActionResult actionResult = controller.Create("Walk the dog") as RedirectToActionResult;
-
-        //Act
-        string result = actionResult.ActionName;
-
-        //Assert
-        Assert.AreEqual(result, "Index");
-    }
+}
